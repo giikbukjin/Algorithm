@@ -6,10 +6,10 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuffer sb = new StringBuffer();
         int count = Integer.parseInt(br.readLine());
-        int num = 0;
-        int sum = 0;
 
         for (int i = 0; i < count; i++) {
+            int num = 0;
+            int sum = 0;
             String[] arr = br.readLine().split("");
 
             for (int j = 0; j < arr.length; j++) {
@@ -21,9 +21,6 @@ public class Main {
                 sum += num;
             }
             sb.append(sum + "\n");
-            num = 0;
-            sum = 0;
-            Arrays.fill(arr, "");
         }
         System.out.println(sb);
     }
