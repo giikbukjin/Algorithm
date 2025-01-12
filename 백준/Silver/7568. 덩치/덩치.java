@@ -16,10 +16,12 @@ public class Main {
         for (int i = 0; i < N; i++) {
             int count = 0;
             for (int j = 0; j < N; j++) {
+                // 자기 자신 비교 제외. 몸무게와 키가 모두 큰 사람의 수 세기
                 if (j != i && p[i].getWeight() < p[j].getWeight() && p[i].getHeight() < p[j].getHeight()) {
                     count++;
                 }
             }
+            // 키 몸무게 모두 큰 사람의 수 + 1이 등수
             p[i].setGrade(count + 1);
         }
 
